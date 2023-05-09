@@ -1,0 +1,15 @@
+{
+  "name": "accelkit",
+  "version": "1.0.0",
+  "description": "a lightweight, accessibility, semantic component library",
+  "main": "index.js",
+  "repository": "https://github.com/jimmy-dee/accelkit.git",
+  "author": "Jimmy <james.a.davies7@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
+  }
+}
