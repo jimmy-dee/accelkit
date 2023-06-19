@@ -1,7 +1,7 @@
-import cn from 'classnames';
+// import cn from 'classnames';
 import React, { FC } from 'react';
 
-import s from './Heading.module.css';
+// import s from './Heading.module.css';
 
 export interface Props {
   // as?: string;

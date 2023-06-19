@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "typescript-sort-keys",
+    "sort-destructure-keys",
+    "sort-keys-fix"
+  ],
+  "extends": [
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "plugin:import/recommended"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "import/no-named-as-default": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "jsx-quotes": ["error", "prefer-double"],
+    "max-len": ["error", 250],
+    "no-await-in-loop": "error",
+    "no-bitwise": "off",
+    "no-trailing-spaces": "error",
+    "object-curly-newline": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "if" },
+      { "blankLine": "always", "prev": "if", "next": "*" }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-max-props-per-line": [1, { "maximum": 1 }],
+    "react/jsx-sort-props": [1, { "ignoreCase": true }],
+    "react/require-default-props": "off",
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-curly-spacing": [2, "never"],
+    "react/jsx-tag-spacing": [2],
+    "react/jsx-one-expression-per-line": [2],
+    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/jsx-pascal-case": "error",
+    "react/jsx-closing-bracket-location": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "semi": "error",
+    "sort-destructure-keys/sort-destructure-keys": "warn",
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-vars": "error",
+    "@typescript-eslint/member-delimiter-style": "warn",
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import Heading from './Heading';
@@ -8,7 +7,7 @@ describe('Heading', () => {
     render(
       <Heading>
         Something
-      </Heading>
+      </Heading>,
     );
     expect(screen.getByText('Something')).toBeDefined();
   });
