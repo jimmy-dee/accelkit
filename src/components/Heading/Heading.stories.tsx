@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Heading>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => <Heading>
+  render: () => <Heading id="story-heading">
     Some
   </Heading>,
 };
