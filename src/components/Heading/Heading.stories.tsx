@@ -5,6 +5,7 @@ import Heading from './Heading';
 const meta: Meta<typeof Heading> = {
   args: {
     children: 'Hello World!',
+    id: 'story-heading',
   },
   component: Heading,
 };
@@ -12,32 +13,32 @@ const meta: Meta<typeof Heading> = {
 export default meta;
 type Story = StoryObj<typeof Heading>;
 
-export const H1: Story = {
+export const Heading1: Story = {
   args: {
-    id: 'story-heading',
+    level: 1,
   },
 };
 
-export const H2: Story = {
+export const Heading2: Story = {
   args: {
-    id: 'story-heading',
+    level: 2,
   },
 };
 
-export const H3: Story = {
+export const Heading3: Story = {
   args: {
-    id: 'story-heading',
+    level: 3,
   },
 };
 
-export const H4: Story = {
+export const Heading4: Story = {
   args: {
-    id: 'story-heading',
+    level: 4,
   },
 };
 
-export const H5: Story = {
+export const Heading5: Story = {
   args: {
-    id: 'story-heading',
+    level: 5,
   },
 };

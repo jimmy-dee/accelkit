@@ -1,6 +1,7 @@
 // import cn from 'classnames';
 import { createElement, FC } from 'react';
-// import s from './Heading.module.css';
+
+import s from './Heading.module.css';
 
 export interface Props {
   /** this is the contents of the heading element */
