@@ -19,6 +19,7 @@ export type Level = 1 | 2 | 3 | 4 | 5;
 // type Variant = 'default' | 'display' | 'sub';
 
 const Heading: FC<Props> = ({ children, id, level = 2 }) => {
+  console.log(s['heading-1']);
 
   return createElement(
     `h${level}`,
