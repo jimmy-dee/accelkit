@@ -23,7 +23,7 @@ const Heading: FC<Props> = ({ children, id, level = 2 }) => {
   return createElement(
     `h${level}`,
     {
-      className: 'greeting',
+      className: s[`heading-${level}`],
       id,
     },
     children,
