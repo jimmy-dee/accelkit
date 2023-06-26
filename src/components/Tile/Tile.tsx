@@ -1,4 +1,4 @@
-// import cn from 'classnames';
+import cn from 'classnames';
 import { createElement, FC } from 'react';
 
 import { createHeadingId } from '../../utils/id-generators';
@@ -7,20 +7,29 @@ import Heading from '../Heading/Heading';
 interface Props {
   /** optional override for the html element, div by default */
   as?: string;
+  /** an optional property to enable a border, this will inherit the font colour specified */
+  border?: boolean;
   /** this is the contents of the heading element */
   children: React.ReactNode;
-  /** heading or title to describe the contents of the tile */
+  /** a required property to set the heading or title to describe the contents of the tile */
   heading: string;
-  /** a unqiue id for the element */
+  /** a required property to set a unqiue id for the element */
   id: string;
+  /** an optional property to make the corners rounded */
+  rounded?: boolean;
+  /** an optional property to make the tile heading only visible to screen readers */
+  srOnly?: boolean;
 }
 
-const Tile: FC<Props> = ({ as = 'div', children, heading, id }) => {
+const Tile: FC<Props> = ({ as = 'div', border, children, heading, id, rounded, srOnly }) => {
   const headingId = createHeadingId(id);
 
   const content = (
     <>
-      <Heading id={headingId}>
+      <Heading
+        className={cn(srOnly && 'sr-only')}
+        id={headingId}
+      >
         {heading}
       </Heading>
       {children}
@@ -31,7 +40,7 @@ const Tile: FC<Props> = ({ as = 'div', children, heading, id }) => {
     as,
     {
       ariaLabelledBy: headingId,
-      className: '',
+      className: cn('p3', rounded && 'rounded-md', border && 'border border-inherit'),
       id,
     },
     content,
