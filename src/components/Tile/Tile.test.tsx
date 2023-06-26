@@ -9,6 +9,7 @@ describe('Tile', () => {
   test('Render a tile component', () => {
     render(
       <Tile
+        heading="Testing Tile header"
         id="testing-tile"
       >
         {text}
