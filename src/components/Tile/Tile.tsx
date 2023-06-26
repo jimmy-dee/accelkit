@@ -32,7 +32,9 @@ const Tile: FC<Props> = ({ as = 'div', border, children, heading, id, rounded, s
       >
         {heading}
       </Heading>
-      {children}
+      <p>
+        {children}
+      </p>
     </>
   );
 
