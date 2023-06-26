@@ -3,4 +3,6 @@ node_modules
 
 # generated files
 .jest-test-results.json
+.rollup.cache
 coverage
+storybook-static

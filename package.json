@@ -71,7 +71,7 @@
   "scripts": {
     "build-storybook": "storybook build",
     "build": "rollup -c",
-    "storybook": "storybook dev",
+    "start": "storybook dev",
     "lint": "eslint . --ext .js,.jsx.ts,.tsx",
     "test": "jest"
   }
