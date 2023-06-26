@@ -1,4 +1,4 @@
-const { rem, stripUnits } = require('./src/utils/css-functions.js');
+const { rem, stripUnits } = require('./src/utils/css-functions.ts');
 
 module.exports = {
   plugins: {
