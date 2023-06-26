@@ -11,6 +11,8 @@ interface Props {
   border?: boolean;
   /** this is the contents of the heading element */
   children: React.ReactNode;
+  /** an optional property to pass custom css classes */
+  className?: string;
   /** a required property to set the heading or title to describe the contents of the tile */
   heading: string;
   /** a required property to set a unqiue id for the element */
@@ -21,7 +23,7 @@ interface Props {
   srOnly?: boolean;
 }
 
-const Tile: FC<Props> = ({ as = 'div', border, children, heading, id, rounded, srOnly }) => {
+const Tile: FC<Props> = ({ as = 'div', border, children, className, heading, id, rounded, srOnly }) => {
   const headingId = createHeadingId(id);
 
   const content = (
@@ -42,7 +44,7 @@ const Tile: FC<Props> = ({ as = 'div', border, children, heading, id, rounded, s
     as,
     {
       ariaLabelledBy: headingId,
-      className: cn('p3', rounded && 'rounded-md', border && 'border border-inherit'),
+      className: cn('p-3', border && 'border border-inherit', rounded && 'rounded-md', className),
       id,
     },
     content,
