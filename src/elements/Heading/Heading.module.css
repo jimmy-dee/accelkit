@@ -1,0 +1,21 @@
+$max-screen: theme('screens.2xl');
+$min-screen: theme('screens.sm');
+
+/* adaption of fluid typography based on https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
+@define-mixin heading $level, $min-font-size, $max-font-size {
+  .h$(level) {
+    $font-diff: $max-font-size - $min-font-size;
+    $screen-diff: stripUnits($max-screen) - stripUnits($min-screen);
+    font-size: clamp(rem($min-font-size) , calc(rem($min-font-size) + ($font-diff) * ((100vw - $min-screen) / ($screen-diff))), rem($max-font-size));
+  }
+}
+
+@mixin heading 1, 32, 56 {}
+
+@mixin heading 2, 36, 48 {}
+
+@mixin heading 3, 32, 40 {}
+
+@mixin heading 4, 24, 28 {}
+
+@mixin heading 5, 22, 24 {}

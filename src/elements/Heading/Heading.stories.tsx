@@ -8,6 +8,7 @@ const meta: Meta<typeof Heading> = {
     id: 'story-heading',
   },
   component: Heading,
+  title: 'Elements/Heading',
 };
 
 export default meta;

@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../src/components/**/*.stories.tsx'],
+  stories: ['../src/components/**/*.stories.tsx', '../src/elements/**/*.stories.tsx'],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions", {
     name: '@storybook/addon-styling',
     options: {

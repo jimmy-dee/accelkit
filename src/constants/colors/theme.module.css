@@ -1,0 +1,19 @@
+.t-camplify {
+  /* Brand colors */
+  --primary: #056ef0;
+  --primaryShade: #004f92;
+  --primaryTint: #c2e1f6;
+  --secondary: #f85a40;
+  --tertiary: #00a69d;
+  /* Neutrals  */
+  --nuetral100: #fff;
+  --nuetral300: #f2f5f8;
+  --nuetral500: #cddbe2;
+  --nuetral600: #a6b8c1;
+  --nuetral700: #447691;
+  --nuetral900: #1e3440;
+  /* Status */
+  --danger: #f32c0b;
+  --success: #03b15d;
+  --warning: #ffbb00;
+}
